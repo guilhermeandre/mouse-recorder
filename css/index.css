@@ -1,0 +1,83 @@
+:root {
+  --x: 0;
+  --y: 0;
+}
+
+html {
+  background-color: rgb(204, 236, 226);
+}
+
+body {  
+  overflow: hidden;
+  height: 100%;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  height: 100%;
+}
+
+#cursor {
+  display: none;
+  position: absolute;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  border: rgb(124, 124, 124);
+  border-style:solid;
+  top: calc(var(--y) * 1px);
+  left: calc(var(--x) * 1px);
+  animation-duration: 0.2ms;
+}
+
+button {
+  border-radius: 2em;
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  outline: none;
+  cursor: pointer;
+}
+
+.is-recording {
+  background-color: #4caf50; /* Green */
+}
+
+.is-recording:hover {
+  background-color: #2e6630; /* Green */
+  transition: ease-in-out 0.5s;
+}
+.is-not-recording {
+  background-color: #f44336; /* Red */
+}
+
+.is-not-recording:hover {
+  background-color: #942720; /* Red */
+  transition: ease-in-out 0.5s;
+}
+
+.replay-recording {
+  background-color: #4c7aaf; /* Blue */
+}
+
+.replay-recording:hover {
+  background-color: #355479;
+  transition: ease-in-out 0.5s;
+}
+
+.is-replaying {
+  background-color: #984caf;
+  transition: ease-in-out 0.5s;
+}
+
+.is-replaying:hover {
+  background-color: #5f306d;
+  transition: ease-in-out 0.5s;
+}
