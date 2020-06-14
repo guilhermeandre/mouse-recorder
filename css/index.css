@@ -8,6 +8,7 @@ html {
 }
 
 body {  
+  margin-top: 25em;
   overflow: hidden;
   height: 100%;
 }
@@ -34,6 +35,8 @@ body {
 }
 
 button {
+  margin-left: 1em;
+  margin-right: 1em;
   border-radius: 2em;
   border: none;
   color: white;
@@ -47,24 +50,26 @@ button {
 }
 
 .is-recording {
-  background-color: #4caf50; /* Green */
+  background-color: #f44336; 
+  animation: blinker 1s linear infinite;
 }
 
 .is-recording:hover {
-  background-color: #2e6630; /* Green */
+  
+  background-color:#942720 ; 
   transition: ease-in-out 0.5s;
 }
 .is-not-recording {
-  background-color: #f44336; /* Red */
+  background-color: #4caf50; 
 }
 
 .is-not-recording:hover {
-  background-color: #942720; /* Red */
+  background-color: #2e6630 ;   
   transition: ease-in-out 0.5s;
 }
 
 .replay-recording {
-  background-color: #4c7aaf; /* Blue */
+  background-color: #4c7aaf; 
 }
 
 .replay-recording:hover {
@@ -74,10 +79,17 @@ button {
 
 .is-replaying {
   background-color: #984caf;
+  animation: blinker 1s linear infinite;
   transition: ease-in-out 0.5s;
 }
 
 .is-replaying:hover {
   background-color: #5f306d;
   transition: ease-in-out 0.5s;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.5;
+  }
 }
