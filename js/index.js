@@ -2,7 +2,7 @@
 
 const $startStop = document.getElementById(`startStop`);
 const $replay = document.getElementById(`replayRecording`);
-const $cursor = document.getElementById(`cursor`); 
+const $cursor = document.getElementById(`cursor`);
 
 let mouseMoves = [];
 let isRecording = false;
@@ -52,6 +52,7 @@ function record() {
 
 function replay (i, initTime = 0) {
 
+
   if (i < mouseMoves.length) {
     mouseMoves.forEach (cursor => {
       setTimeout(() => {
@@ -66,6 +67,7 @@ function replay (i, initTime = 0) {
     })
     
   } else {
+   
     $cursor.style.display = 'none';
     isPlaying = false;
     $replay.innerHTML = 'Start replaying';

@@ -1,6 +1,8 @@
 :root {
   --x: 0;
   --y: 0;
+  --height: 0;
+  --widht: 0;
 }
 
 html {
@@ -22,17 +24,20 @@ body {
 }
 
 #cursor {
+  
   display: none;
   position: absolute;
-  width: 0.75em;
-  height: 0.75em;
   border-radius: 50%;
   border: rgb(124, 124, 124);
   border-style:solid;
+  height: 1em;
+  width: 1em;
   top: calc(var(--y) * 1px);
   left: calc(var(--x) * 1px);
-  animation-duration: 0.2ms;
+  animation-duration: 1.5ms;
+  cursor: pointer;
 }
+
 
 button {
   margin-left: 1em;
